@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <style>
+        .control-style::after{
+            content:"*";
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Registration Form</h2>
+    <form>
+
+    <fieldset> 
+        <legend><h3>Create User Id and Password</h3></legend>
+        <label class="control-style" for="userid">User Id: </label>
+        <input type="text" id="userid" name="UserId" value="" placeholder="Your email id" required><br><br>
+        <label class="control-style" for="pass">Password: </label>
+        <input type="password" id="pass" name="Pass" value="" pattern="(?=.*?[A-Z])(?=.*[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-_]).{8,16}"  required><br>
+        <small>Format: combination of numericals,alphabets and special characters; minimum 8 and 16 characters</small><br><br>
+        <label class="control-style" for="cpass">Confirm Password: </label>
+        <input type="password" id="cpass" name="CPass" value="" required><br><br><br>
+        </fieldset>
+        <br><br>
+
+    <fieldset>
+        <legend><h3> PERSONAL INFORMATION </h3></legend>
+        <img src="dp.jpg" alt="Person" style="width:240px;height:228px";
+        align="right">
+        <label class="control-style">First Name: </label>
+        <input type="text" name="firstname" placeholder="Enter First Name" required><br><br><br>
+        Last Name: 
+        <input type="text" name="firstname" placeholder="Enter Last Name"><br><br><br>
+        Gender: 
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female<br><br><br>
+        <label class="control-style">Birthday: </label>
+        <input type="datetime-local" name="bdaytime" required><br><br><br>
+        Country: 
+        <input list="Country" name="Country" >
+        <datalist id="Country">
+            <option value="America">
+            <option value="Alabama">
+            <option value="Canada">
+            <option value="Denmark">
+            <option value="India">
+            <option value="Japan">
+            <option value="United States">
+            <option value="United Kingdom">
+        </datalist>
+        <br><br><br>
+        <label class="control-style">E-mail: </label>
+        <input type="email" name="email" required><br><br><br>
+        Address: <br>
+        <textarea rows="5" cols="40"></textarea>
+
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend><h3> EDUCATIONAL DETAILS </h3></legend>
+        Degree: <select name="degree">
+            <option value="B.E">B.E</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="PhD">PhD</option>
+        </select><br><br><br>
+        Certified Courses, if any: <textarea rows="5" cols="40"></textarea>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend><h3> WORK EXPERIENCE </h3></legend>
+        Knowledge in: <input type="checkbox" name="HTML" value="HTML">HTML
+        <input type="checkbox" name=".NET" value=".NET">.NET 
+        <input type="checkbox" name="JAVA" value="JAVA">JAVA 
+        <input type="checkbox" name="PHP" value="PHP">PHP
+        <br><br>
+        Years of experience : <input type="number" name="years" min="0" max="100" step="1" value="0">
+   </fieldset>
+   <br><br>
+   <input type="submit" title="Enteer the above details and click me" />
+    </form>
+    
+</body>
+</html>
